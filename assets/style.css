@@ -1,0 +1,116 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --surface: #f6f7f8;
+  --text: #1a1a1a;
+  --muted: #4a5565;
+  --accent: #0f62fe;
+  --border: #d9dee5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101214;
+    --surface: #171a1f;
+    --text: #f1f3f5;
+    --muted: #c1cad6;
+    --accent: #8ab4ff;
+    --border: #303847;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+main,
+header,
+footer {
+  width: min(100% - 2rem, 46.875rem);
+  margin-inline: auto;
+}
+
+.section {
+  padding: 1.25rem 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+}
+
+h1 {
+  font-size: 1.9rem;
+}
+
+h2 {
+  margin-top: 0.25rem;
+  font-size: 1.35rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+}
+
+p,
+ul {
+  margin: 0 0 0.75rem;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+.lead {
+  color: var(--muted);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.contact-list li {
+  margin: 0 0 0.3rem;
+}
+
+.cv-link {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  color: var(--bg);
+  background: var(--accent);
+  padding: 0.45rem 0.75rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.meta {
+  color: var(--muted);
+}
+
+a {
+  color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
